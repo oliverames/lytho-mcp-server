@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" width="80" height="80" alt="Lytho">
+  <img src="icon.png" width="200" alt="Lytho">
 </p>
 
 <h1 align="center">Lytho MCP Server</h1>
