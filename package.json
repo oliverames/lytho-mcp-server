@@ -1,17 +1,19 @@
 {
   "name": "@oliverames/lytho-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Full-coverage MCP server for the Lytho Workflow API",
   "type": "module",
   "bin": {
-    "lytho-mcp-server": "./dist/index.js"
+    "lytho-mcp-server": "./index.js"
   },
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "files": [
+    "index.js",
     "dist/index.js"
   ],
   "scripts": {
     "build": "tsc",
+    "postbuild": "chmod +x dist/index.js",
     "dev": "tsc --watch",
     "start": "node dist/index.js"
   },
