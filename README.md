@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" width="200" alt="Lytho">
+  <img src="assets/icon.png" width="80" height="80" alt="Lytho">
 </p>
 
 <h1 align="center">Lytho MCP Server</h1>
@@ -19,6 +19,9 @@
   <a href="https://www.npmjs.com/package/@oliverames/lytho-mcp-server">
     <img src="https://img.shields.io/npm/v/%40oliverames%2Flytho-mcp-server?style=flat-square&color=f5a542" alt="npm">
   </a>
+  <a href="https://github.com/oliverames/lytho-mcp-server/releases/tag/v1.0.2">
+    <img src="https://img.shields.io/github/v/release/oliverames/lytho-mcp-server?style=flat-square&color=f5a542&label=MCPB" alt="MCPB release">
+  </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-f5a542?style=flat-square" alt="License">
   </a>
@@ -29,6 +32,7 @@
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> &bull;
+  <a href="#install-with-mcpb">MCPB Download</a> &bull;
   <a href="#what-you-can-do">What You Can Do</a> &bull;
   <a href="#tools-reference">All 10 Tools</a> &bull;
   <a href="#environment-variables">Configuration</a>
@@ -47,6 +51,14 @@ Authentication uses Lytho's OAuth 2.0 client credentials flow (Keycloak-hosted).
 ---
 
 ## Quick Start
+
+### Install with MCPB
+
+For Claude Desktop and other MCPB-compatible clients, download the local bundle from the [v1.0.2 release](https://github.com/oliverames/lytho-mcp-server/releases/tag/v1.0.2):
+
+[Download `lytho-mcp-server-1.0.2.mcpb`](https://github.com/oliverames/lytho-mcp-server/releases/download/v1.0.2/lytho-mcp-server-1.0.2.mcpb)
+
+The bundle includes the Lytho favicon, production runtime dependencies, and setup prompts for the OAuth client ID, client secret, and token URL.
 
 ### 1. Get Your Lytho API Credentials
 
