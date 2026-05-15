@@ -2,7 +2,7 @@
 
 ## 2026-04-13 — Initial build: full Lytho Workflow API MCP server, npm publish, plugin
 
-**What changed**: Built the complete Lytho MCP server from scratch. Fetched and mapped the full Lytho Open API (56 endpoints across 6 resource types: workrequest, task, proof, project, campaign, preference). Designed 10 consolidated tools using a `type` enum parameter rather than one-per-endpoint, covering the full surface cleanly. Implemented OAuth 2.0 client credentials flow (Keycloak-hosted) with in-memory token caching and 60s pre-expiry refresh. Used `@modelcontextprotocol/sdk` v1.29 `McpServer.registerTool()` API (the `Server` class is deprecated) with Zod v4 schemas for parameter validation. All IDs typed as `z.number().int()` (API spec: int32). Published as `@oliverames/lytho-mcp-server@1.0.2` to npm. Created GitHub repo `oliverames/lytho-mcp-server`. Added Lytho logo (175x105 wordmark PNG from API docs S3 bucket). Created `ames-lytho` plugin in ames-claude marketplace. Created 1Password item in Development vault for OAuth credentials. Created Apple Notes "Lytho MCP Server" in 💻 Tech.
+**What changed**: Built the complete Lytho MCP server from scratch. Fetched and mapped the full Lytho Open API (56 endpoints across 6 resource types: workrequest, task, proof, project, campaign, preference). Designed 10 consolidated tools using a `type` enum parameter rather than one-per-endpoint, covering the full surface cleanly. Implemented OAuth 2.0 client credentials flow (Keycloak-hosted) with in-memory token caching and 60s pre-expiry refresh. Used `@modelcontextprotocol/sdk` v1.29 `McpServer.registerTool()` API (the `Server` class is deprecated) with Zod v4 schemas for parameter validation. All IDs typed as `z.number().int()` (API spec: int32). Published as `@oliverames/lytho-mcp-server@1.0.2` to npm. Created GitHub repo `oliverames/lytho-mcp-server`. Added Lytho logo (175x105 wordmark PNG from API docs S3 bucket). Created `ames-lytho` plugin in ames-plugins marketplace. Created 1Password item in Development vault for OAuth credentials. Created Apple Notes "Lytho MCP Server" in 💻 Tech.
 
 **Decisions made**:
 - **10 tools over 56**: The API's 6 resources share identical CRUD patterns. A `type` enum (`workrequest | task | proof | project | campaign`) covers all resources with one tool per operation, keeping Claude's context lean. Pattern from skill: "hybrid" -- dedicated tools for distinct operations, not one-per-endpoint.
@@ -16,7 +16,7 @@
 - Client secret needs to be added to 1Password "Lytho Workflow Open API" item (currently a placeholder)
 - Test the server end-to-end with real Lytho credentials once secret is entered
 - Verify `npx -y @oliverames/lytho-mcp-server@latest` works correctly from the plugin `.mcp.json`
-- The sources snapshot in `ames-lytho/sources/lytho-mcp-server/` is a manual copy -- no `update.sh` yet (unlike YNAB which also lacks one; see ames-claude worklog)
+- The sources snapshot in `ames-lytho/sources/lytho-mcp-server/` is a manual copy -- no `update.sh` yet (unlike YNAB which also lacks one; see ames-plugins worklog)
 - Deprecate/yank 1.0.0 and 1.0.1 from npm (`npm deprecate`) to avoid users accidentally picking up the broken bin versions
 
 **Open questions**:
